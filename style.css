@@ -1,0 +1,65 @@
+body {
+  color: #fff;
+  background: #fff;
+  font-size: 48px;
+  line-height: 24px;
+  font-family: helvetica, arial;
+}
+
+a {
+  text-decoration: none;
+  color: #fefefe;
+}
+
+#container {
+  position: relative;
+}
+#container canvas, #overlay {
+  position: absolute;
+}
+
+#overlay {
+	
+  top:5%;
+	left:2%;
+	
+}
+
+.main-nav {
+
+}
+
+.nav-title-container:hover {
+  min-height: 35px;
+  background-color: #000000;
+  opacity: 0.5;
+}
+
+.nav-title {
+  text-align: center;
+  text-shadow: 1px 1px #222222;
+  font-size: 48px;
+  line-height: 24px;
+}
+
+.nav-title:hover {
+  opacity: 1;
+}
+
+.nav-list li{
+  list-style: none;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: left;
+  text-decoration: none;
+  text-shadow: 1px 1px #222222;
+}
+
+div.li-container:hover{
+  min-height: 24px;
+  background-color: #000000;
+  opacity: 0.5;
+}
+
+canvas {
+}
