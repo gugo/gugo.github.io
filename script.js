@@ -156,8 +156,8 @@ var main=function(p) {
   var ringRadius = 1.2;
   var maxRadius = radius + ringRadius;
 
-  var sides = 36;
-  var rings = 36;
+  var sides = 48;
+  var rings = 48;
 
   var verticesPerRow = sides + 1;
   var verticesPerCol = rings + 1;
@@ -288,7 +288,7 @@ var main=function(p) {
       LIBS.set_I4(MOVEMATRIX);
       LIBS.translateX(MOVEMATRIX, 0.4);
       LIBS.translateZ(MOVEMATRIX, -20);
-      LIBS.rotateZ(MOVEMATRIX, LIBS.degToRad(90));
+      LIBS.rotateZ(MOVEMATRIX, LIBS.degToRad(0));
     } else {
       LIBS.set_I4(MOVEMATRIX);
       LIBS.translateY(MOVEMATRIX, 12);
