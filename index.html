@@ -22,7 +22,7 @@
     <script src="jquery.min.js"></script>
     <script src="app.js"></script>
   </head>
-  <body style='margin:0px' onload='main(0)'>
+  <body style='margin:0px' onload='webGLStart(0)'>
   	<div class="container">
 	    <canvas id='canvas'
 	            style='position: absolute; background-color: black;'>
@@ -32,9 +32,9 @@
 	    		<div class="nav-title"><a href="#">gugo</a></div>
 	    	</div>
 	   		<ul class="nav-list">
-		   		<div class="li-container"><li><a href="#" id="about" onclick="main(1)">biography</a></li></div>
-		   		<div class="li-container"><li><a href="#" id="project" onclick="main(2)">projects</a></li></div>
-		   		<div class="li-container"><li><a href="#" id="contact" onclick="main(3)">contacts</a></li></div>
+		   		<div class="li-container"><li><a href="#" id="about" onclick="checkButton(1)">biography</a></li></div>
+		   		<div class="li-container"><li><a href="#" id="project" onclick="checkButton(2)">projects</a></li></div>
+		   		<div class="li-container"><li><a href="#" id="contact" onclick="checkButton(3)">contacts</a></li></div>
 	   		</ul>
 	    </div>
 	</div>
