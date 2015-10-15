@@ -248,8 +248,9 @@ var MOVEMATRIX;
 var VIEWMATRIX;
 
 var time_old=0;
-var stepZ = z;
+var stepZ = 0;
 var stepY = 0;
+var stepX = 0;
 
 var p = 0;
 
@@ -269,16 +270,16 @@ var animate=function(time) {
     
     LIBS.set_I4(MOVEMATRIX);
     LIBS.rotateY(MOVEMATRIX, z);
-    z -= 0.005
+    z -= 0.005;
 
   } else if (p == 1) {
     LIBS.set_I4(MOVEMATRIX);
     LIBS.rotateY(MOVEMATRIX, z);
-    LIBS.rotateX(MOVEMATRIX, stepY);
+    LIBS.rotateX(MOVEMATRIX, stepX);
     LIBS.translateX(MOVEMATRIX, -stepZ/10);
     LIBS.translateZ(MOVEMATRIX, stepZ);
 
-    stepY -= 0.05
+    stepX -= 0.05
     if (stepZ > -20) {
       stepZ -= 0.05;
     } else {
@@ -286,15 +287,24 @@ var animate=function(time) {
     }
   } else if (p == 2) {
     LIBS.set_I4(MOVEMATRIX);
-    LIBS.translateX(MOVEMATRIX, 0.4);
-    LIBS.translateZ(MOVEMATRIX, -20);
-    LIBS.rotateZ(MOVEMATRIX, LIBS.degToRad(0));
-  } else {
-    LIBS.set_I4(MOVEMATRIX);
     LIBS.translateY(MOVEMATRIX, 12);
     LIBS.translateX(MOVEMATRIX, 7);
     LIBS.translateZ(MOVEMATRIX, -20);
     LIBS.rotateX(MOVEMATRIX, LIBS.degToRad(90));
+  } else {
+    
+    LIBS.set_I4(MOVEMATRIX);
+    LIBS.translateX(MOVEMATRIX, stepZ/50);
+    LIBS.translateZ(MOVEMATRIX, stepZ);
+    LIBS.rotateZ(MOVEMATRIX, LIBS.degToRad(stepZ*4.5));
+    LIBS.rotateX(MOVEMATRIX, z);
+    // LIBS.rotateY(MOVEMATRIX, LIBS.degToRad(90));
+    z -= 0.01;
+    if (stepZ > -20) {
+      stepZ -= 0.05;
+    } else {
+      stepZ = -20;
+    }
   }
 
   GL.viewport(0.0, 0.0, GL.viewportWidth, GL.viewportHeight);
