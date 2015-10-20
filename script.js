@@ -1,22 +1,27 @@
+/*========================= CAPTURE MOUSE EVENTS ========================= */
 
-  /*========================= CAPTURE MOUSE EVENTS ========================= */
 var AMORTIZATION=0.95;
 var drag=false;   
 var old_x, old_y;   
 var dX=0, dY=0;
 
 var mouseDown=function(e) {
+
   drag=true;
   old_x=e.pageX, old_y=e.pageY;
   e.preventDefault();
   return false;
+
 };
   
 var mouseUp=function(e){
+
   drag=false;
+
 };
   
 var mouseMove=function(e) {
+
   if (!drag) return false;
   dX=(e.pageX-old_x)*0.5*Math.PI/CANVAS.width,
   dY=(e.pageY-old_y)*0.5*Math.PI/CANVAS.height;
@@ -24,11 +29,13 @@ var mouseMove=function(e) {
   PHI+=dY;
   old_x=e.pageX, old_y=e.pageY;
   e.preventDefault();
+
 };
 
 var z=-6.0;
 
 function handleMouseWheel(event){
+
   var delta = 0;
   if (!event) /* For IE. */
     event = window.event;
@@ -53,19 +60,24 @@ function handleMouseWheel(event){
   if (event.preventDefault)
     event.preventDefault();
     event.returnValue = false;
+
 }
 
 function handleScroll(delta) {
+
   if (delta < 0)
     z=z-0.04;
   else
     z=z+0.04;
+
 }
       
 /*========================= GET WEBGL CONTEXT ========================= */
+
 var GL;
 
 function initGL(canvas) {
+
   try {
     GL = canvas.getContext("experimental-webgl", {antialias: true});
     GL.viewportWidth = canvas.width;
@@ -74,6 +86,7 @@ function initGL(canvas) {
     alert("You are not webgl compatible :(") ;
     return false;
   }
+
 }
 
 /*========================= SHADERS ========================= */
@@ -99,6 +112,7 @@ gl_FragColor = vec4(vColor, 1.);\n\
 }";
 
 var get_shader=function(source, type, typeString) {
+
   var shader = GL.createShader(type);
   GL.shaderSource(shader, source);
   GL.compileShader(shader);
@@ -107,6 +121,7 @@ var get_shader=function(source, type, typeString) {
     return false;
   }
   return shader;
+
 };
 
 var SHADER_PROGRAM;
@@ -137,12 +152,10 @@ function initShaders() {
   GL.enableVertexAttribArray(_position);
 
   GL.useProgram(SHADER_PROGRAM);
+
 }
 
-
-
 /*========================= THE TORUS ========================= */
-//POINTS :
 
 var TOURS_VERTEX;
 var TORUS_FACES;
@@ -231,16 +244,15 @@ function initBuffers() {
 
 }
 
-
-
-
 /*========================= DRAWING ========================= */
 
 function drawScene() {
+
   GL.enable(GL.DEPTH_TEST);
   GL.depthFunc(GL.LEQUAL);
   GL.clearColor(1.0, 1.0, 1.0, 1.0);
   GL.clearDepth(1.0);
+
 }
 
 var PROJMATRIX;
@@ -251,6 +263,12 @@ var time_old=0;
 var offsetZ = 0;
 var offsetX = 0;
 var offsetY = 0;
+var oldOffsetZ = 0;
+var oldOffsetX = 0;
+var oldOffsetY = 0;
+var distanceZ = 0;
+var distanceX = 0;
+var distanceY = 0;
 var stepZ = 0;
 var stepY = 0;
 var stepX = 0;
@@ -259,117 +277,113 @@ var posY = 0;
 var posZ = 0;
 
 var p = 0;
+var clickcount = 0;
 
 function checkButton(mode) {
-  p = mode;
+
+  if (mode == 0) {
+    offsetZ = 0;
+    offsetX = 0;
+    offsetY = 0;
+  } else if (mode == 1) {
+    offsetZ = 20;
+    offsetX = 2;
+    offsetY = 0;
+  } else if (mode == 2) {
+    offsetZ = 0;
+    offsetX = radius-0.3;
+    offsetY = 0;
+  } else if (mode == 3) {
+    offsetZ = 4;
+    offsetX = 3;
+    offsetY = 5;
+  }
+
+  distanceZ = Math.abs(offsetZ - oldOffsetZ);
+  distanceX = Math.abs(offsetX - oldOffsetX);
+  distanceY = Math.abs(offsetY - oldOffsetY);
+
+  stepZ = distanceZ/120;
+  stepX = distanceX/120;
+  stepY = distanceY/120;
+
+  p = mode;  
+  
+}
+
+function moveToAndStop() {
+
+  LIBS.set_I4(MOVEMATRIX);
+  LIBS.translateZ(MOVEMATRIX, -posZ);
+  LIBS.translateX(MOVEMATRIX, posX);
+  LIBS.translateY(MOVEMATRIX, posY);
+
+  oldOffsetX = posX;
+  oldOffsetZ = posZ;
+  oldOffsetY = posY;
+
+  if (posZ > offsetZ+0.01) {
+    posZ -= stepZ;
+  } else if (posZ < offsetZ-0.01) {
+    posZ += stepZ;
+  } else {
+    posZ = offsetZ;
+  }
+
+  if (posX > offsetX+0.01) {
+    posX -= stepX;
+  } else if (posX < offsetX-0.01) {
+    posX += stepX;
+  } else {
+    posX = offsetX;
+  }
+
+  if (posY > offsetY+0.01) {
+    posY -= stepY;
+  } else if (posY < offsetY-0.01) {
+    posY += stepY;
+  } else {
+    posY = offsetY;
+  }
+
 }
 
 var animate=function(time) {
+
   time_old=time;
-  //console.log(z);
+
+
+  // console.log(oldOffsetZ);
+  // console.log(oldOffsetX);
   // var dt=time-time_old;
   //    if (!drag) {
   //        dX*=AMORTIZATION, dY*=AMORTIZATION;
   //        THETA+=dX, PHI+=dY;
   //    }
+
   if(p == 0) {
-    
-    LIBS.set_I4(MOVEMATRIX);
+
+    moveToAndStop();
     LIBS.rotateY(MOVEMATRIX, z);
     z -= 0.005;
 
   } else if (p == 1) {
-    offsetZ = 20;
-    offsetX = 2;
 
-    stepZ = offsetZ/120;
-    stepY = offsetY/120;
-    stepX = offsetX/120;
-
-    LIBS.set_I4(MOVEMATRIX);
+    moveToAndStop();
     LIBS.rotateY(MOVEMATRIX, z);
-    // LIBS.rotateX(MOVEMATRIX, LIBS.degToRad(posZ*4.5));
-    LIBS.translateX(MOVEMATRIX, posX);
-    LIBS.translateZ(MOVEMATRIX, -posZ);
-
-    if (posX > offsetX+0.1) {
-      posX -= stepX;
-    } else if (posX < offsetX-0.1) {
-      posX += stepX;
-    } else {
-      posX = offsetX;
-    }
-
-    if (posZ > offsetZ+0.1) {
-      posZ -= stepZ;
-    } else if (posZ < offsetZ-0.1) {
-      posZ += stepZ;
-    } else {
-      posZ = offsetZ;
-    }
-  } else if (p == 2) {
-    offsetZ = 20;
-    offsetX = 7;
-
-    stepZ = offsetZ/120;
-    stepY = offsetY/120;
-    stepX = offsetX/120;
-
-    LIBS.set_I4(MOVEMATRIX);
-    LIBS.rotateY(MOVEMATRIX, z);
-    // LIBS.translateY(MOVEMATRIX, 12);
-    LIBS.translateX(MOVEMATRIX, posX);
-    LIBS.translateZ(MOVEMATRIX, -posZ);
-    // LIBS.rotateX(MOVEMATRIX, LIBS.degToRad(90));
-
-    if (posX > offsetX+0.1) {
-      posX -= stepX;
-    } else if (posX < offsetX-0.1) {
-      posX += stepX;
-    } else {
-      posX = offsetX;
-    }
-    
-    if (posZ > offsetZ+0.1) {
-      posZ -= stepZ;
-    } else if (posZ < offsetZ-0.1) {
-      posZ += stepZ;
-    } else {
-      posZ = offsetZ;
-    }
-  } else {
-    offsetZ = 20;
-    offsetX = 1;
-
-    stepZ = offsetZ/120;
-    stepY = offsetY/120;
-    stepX = offsetX/120;
-    
-    LIBS.set_I4(MOVEMATRIX);
-    LIBS.rotateY(MOVEMATRIX, z);
-    LIBS.translateX(MOVEMATRIX, posX);
-    LIBS.translateZ(MOVEMATRIX, -posZ);
-
-    // LIBS.rotateZ(MOVEMATRIX, LIBS.degToRad(posZ*4.5));
-    // LIBS.rotateX(MOVEMATRIX, z);
-    // LIBS.rotateY(MOVEMATRIX, LIBS.degToRad(90));
     z -= 0.01;
 
-    if (posX > offsetX+0.1) {
-      posX -= stepX;
-    } else if (posX < offsetX-0.1) {
-      posX += stepX;
-    } else {
-      posX = offsetX;
-    }
+  } else if (p == 2) {
     
-    if (posZ > offsetZ+0.1) {
-      posZ -= stepZ;
-    } else if (posZ < offsetZ-0.1) {
-      posZ += stepZ;
-    } else {
-      posZ = offsetZ;
-    }
+    moveToAndStop();
+    LIBS.rotateY(MOVEMATRIX, z);
+    z -= 0.01;
+
+  } else {
+    
+    moveToAndStop();
+    LIBS.rotateY(MOVEMATRIX, z);
+    z -= 0.01;
   }
 
   GL.viewport(0.0, 0.0, GL.viewportWidth, GL.viewportHeight);
@@ -386,9 +400,8 @@ var animate=function(time) {
   GL.flush();
 
   window.requestAnimationFrame(animate);
+
 };
-
-
 
 function webGLStart(mode) {
 
@@ -420,5 +433,6 @@ function webGLStart(mode) {
   drawScene();
   checkButton(mode);
   animate(0);
+
 }
 
