@@ -248,9 +248,15 @@ var MOVEMATRIX;
 var VIEWMATRIX;
 
 var time_old=0;
+var offsetZ = 0;
+var offsetX = 0;
+var offsetY = 0;
 var stepZ = 0;
 var stepY = 0;
 var stepX = 0;
+var posX = 0;
+var posY = 0;
+var posZ = 0;
 
 var p = 0;
 
@@ -273,37 +279,96 @@ var animate=function(time) {
     z -= 0.005;
 
   } else if (p == 1) {
+    offsetZ = 20;
+    offsetX = 2;
+
+    stepZ = offsetZ/120;
+    stepY = offsetY/120;
+    stepX = offsetX/120;
+
     LIBS.set_I4(MOVEMATRIX);
     LIBS.rotateY(MOVEMATRIX, z);
-    LIBS.rotateX(MOVEMATRIX, stepX);
-    LIBS.translateX(MOVEMATRIX, -stepZ/10);
-    LIBS.translateZ(MOVEMATRIX, stepZ);
+    // LIBS.rotateX(MOVEMATRIX, LIBS.degToRad(posZ*4.5));
+    LIBS.translateX(MOVEMATRIX, posX);
+    LIBS.translateZ(MOVEMATRIX, -posZ);
 
-    stepX -= 0.05
-    if (stepZ > -20) {
-      stepZ -= 0.05;
+    if (posX > offsetX+0.1) {
+      posX -= stepX;
+    } else if (posX < offsetX-0.1) {
+      posX += stepX;
     } else {
-      stepZ = -20;
+      posX = offsetX;
+    }
+
+    if (posZ > offsetZ+0.1) {
+      posZ -= stepZ;
+    } else if (posZ < offsetZ-0.1) {
+      posZ += stepZ;
+    } else {
+      posZ = offsetZ;
     }
   } else if (p == 2) {
+    offsetZ = 20;
+    offsetX = 7;
+
+    stepZ = offsetZ/120;
+    stepY = offsetY/120;
+    stepX = offsetX/120;
+
     LIBS.set_I4(MOVEMATRIX);
-    LIBS.translateY(MOVEMATRIX, 12);
-    LIBS.translateX(MOVEMATRIX, 7);
-    LIBS.translateZ(MOVEMATRIX, -20);
-    LIBS.rotateX(MOVEMATRIX, LIBS.degToRad(90));
+    LIBS.rotateY(MOVEMATRIX, z);
+    // LIBS.translateY(MOVEMATRIX, 12);
+    LIBS.translateX(MOVEMATRIX, posX);
+    LIBS.translateZ(MOVEMATRIX, -posZ);
+    // LIBS.rotateX(MOVEMATRIX, LIBS.degToRad(90));
+
+    if (posX > offsetX+0.1) {
+      posX -= stepX;
+    } else if (posX < offsetX-0.1) {
+      posX += stepX;
+    } else {
+      posX = offsetX;
+    }
+    
+    if (posZ > offsetZ+0.1) {
+      posZ -= stepZ;
+    } else if (posZ < offsetZ-0.1) {
+      posZ += stepZ;
+    } else {
+      posZ = offsetZ;
+    }
   } else {
+    offsetZ = 20;
+    offsetX = 1;
+
+    stepZ = offsetZ/120;
+    stepY = offsetY/120;
+    stepX = offsetX/120;
     
     LIBS.set_I4(MOVEMATRIX);
-    LIBS.translateX(MOVEMATRIX, stepZ/50);
-    LIBS.translateZ(MOVEMATRIX, stepZ);
-    LIBS.rotateZ(MOVEMATRIX, LIBS.degToRad(stepZ*4.5));
-    LIBS.rotateX(MOVEMATRIX, z);
+    LIBS.rotateY(MOVEMATRIX, z);
+    LIBS.translateX(MOVEMATRIX, posX);
+    LIBS.translateZ(MOVEMATRIX, -posZ);
+
+    // LIBS.rotateZ(MOVEMATRIX, LIBS.degToRad(posZ*4.5));
+    // LIBS.rotateX(MOVEMATRIX, z);
     // LIBS.rotateY(MOVEMATRIX, LIBS.degToRad(90));
     z -= 0.01;
-    if (stepZ > -20) {
-      stepZ -= 0.05;
+
+    if (posX > offsetX+0.1) {
+      posX -= stepX;
+    } else if (posX < offsetX-0.1) {
+      posX += stepX;
     } else {
-      stepZ = -20;
+      posX = offsetX;
+    }
+    
+    if (posZ > offsetZ+0.1) {
+      posZ -= stepZ;
+    } else if (posZ < offsetZ-0.1) {
+      posZ += stepZ;
+    } else {
+      posZ = offsetZ;
     }
   }
 
