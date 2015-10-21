@@ -207,9 +207,9 @@ function initBuffers() {
 
       torus_vertex = torus_vertex.concat(xyz);
 
-      r = 0.5 + 0.4 * x;
-      g = 0.5 + 0.4 * z;
-      b = 0.5 + 0.4 * y;
+      r = 0.5 + 0.3 * x;
+      g = 0.5 + 0.3 * z;
+      b = 0.5 + 0.3 * y;
       colors = [r,g,b];
 
       torus_vertex = torus_vertex.concat(colors);
@@ -275,6 +275,7 @@ var stepX = 0;
 var posX = 0;
 var posY = 0;
 var posZ = 0;
+var treshold = 0.05;
 
 var p = 0;
 var clickcount = 0;
@@ -286,8 +287,8 @@ function checkButton(mode) {
     offsetX = 0;
     offsetY = 0;
   } else if (mode == 1) {
-    offsetZ = 20;
-    offsetX = 2;
+    offsetZ = 12;
+    offsetX = 0;
     offsetY = 0;
   } else if (mode == 2) {
     offsetZ = 0;
@@ -322,25 +323,25 @@ function moveToAndStop() {
   oldOffsetZ = posZ;
   oldOffsetY = posY;
 
-  if (posZ > offsetZ+0.01) {
+  if (posZ > offsetZ+treshold) {
     posZ -= stepZ;
-  } else if (posZ < offsetZ-0.01) {
+  } else if (posZ < offsetZ-treshold) {
     posZ += stepZ;
   } else {
     posZ = offsetZ;
   }
 
-  if (posX > offsetX+0.01) {
+  if (posX > offsetX+treshold) {
     posX -= stepX;
-  } else if (posX < offsetX-0.01) {
+  } else if (posX < offsetX-treshold) {
     posX += stepX;
   } else {
     posX = offsetX;
   }
 
-  if (posY > offsetY+0.01) {
+  if (posY > offsetY+treshold) {
     posY -= stepY;
-  } else if (posY < offsetY-0.01) {
+  } else if (posY < offsetY-treshold) {
     posY += stepY;
   } else {
     posY = offsetY;
@@ -365,18 +366,21 @@ var animate=function(time) {
 
     moveToAndStop();
     LIBS.rotateY(MOVEMATRIX, z);
+    LIBS.rotateZ(MOVEMATRIX, LIBS.degToRad(posZ*(7.5)));
     z -= 0.005;
 
   } else if (p == 1) {
 
     moveToAndStop();
     LIBS.rotateY(MOVEMATRIX, z);
+    LIBS.rotateZ(MOVEMATRIX, LIBS.degToRad(posZ*7.5));
     z -= 0.01;
 
   } else if (p == 2) {
     
     moveToAndStop();
     LIBS.rotateY(MOVEMATRIX, z);
+    LIBS.rotateZ(MOVEMATRIX, LIBS.degToRad(posZ*(7.5)));
     z -= 0.01;
 
   } else {

@@ -28,14 +28,76 @@
 	            style='position: absolute; background-color: black;'>
 	    </canvas>
 	    <div id="overlay" class="main-nav">
-	    	<div class="nav-title-container">
-	    		<div class="nav-title"><a href="#" onclick="checkButton(0)">gugo</a></div>
-	    	</div>
-	   		<ul class="nav-list">
-		   		<div class="li-container"><li><a href="#" id="about" onclick="checkButton(1)">biography</a></li></div>
-		   		<div class="li-container"><li><a href="#" id="project" onclick="checkButton(2)">projects</a></li></div>
-		   		<div class="li-container"><li><a href="#" id="contact" onclick="checkButton(3)">contacts</a></li></div>
-	   		</ul>
+		    <div class="header">
+		    	<div class="nav-title-container">
+		    		<div class="nav-title">
+		    			<a href="#" onclick="checkButton(0)">gugo<br>  ____</a>
+		    			<p class="nav-subtitle">interaction designer<br>visual artist</p>
+		    		</div>
+		    	</div>
+		   		<ul class="nav-main-list">
+			   		<div class="li-container">
+			   			<li>
+			   				<a href="#" id="about" onclick="checkButton(1)">about</a>
+			   			</li>
+			   		</div>
+			   			<div class="li-container">
+			   				<li>
+			   					<a href="#" id="projects" onclick="checkButton(2)">projects</a>
+			   					<ul class="nav-secondary-list">
+			   						<div class="li-container">
+			   							<li><a href="#">Mirrored Babel</a></li>
+			   						</div>
+			   						<div class="li-container">
+			   							<li><a href="#">NapNap</a></li>
+			   						</div>
+			   						<div class="li-container">
+			   							<li><a href="#">Digital Embroidery</a></li>
+			   						</div>
+			   						<div class="li-container">
+			   							<li><a href="#">SMF Logo</a></li>
+			   						</div>
+			   						<div class="li-container">
+			   							<li><a href="#">Gugo Logo</a></li>
+			   						</div>
+			   						<div class="li-container">
+			   							<li><a href="#"></a>Psy-Tro-Flo</li>
+			   						</div>
+			   						<div class="li-container">
+			   							<li><a href="#"></a>Baloops</li>
+			   						</div>
+			   					</ul>
+			   				</li>
+			   			</div>
+			   		<div class="li-container">
+			   			<li>
+			   				<a href="#" id="contact" onclick="checkButton(3)">contact</a>
+			   			</li>
+			   		</div>
+		   		</ul>
+		    </div>
+		</div>
+		<div id="overlay" class="page-nav">
+		    <div class="page">
+		    	<div class="about">
+		    		<div id="data">
+		    			<p>Guglielmo Torelli<br>Based in Airports</p>
+		    		</div>
+		    		<div id="intro">
+		    			<p>Visual artist and Interaction designer, loves to design everything that is open, experimental and interactive.<br>Addicted to web technologies, physical computing and poetic computation.<br>Works as a freelance designer since 2012.</p>
+		    		</div>
+		    		<div id="education">
+		    			<h2 id="education-title">education</h2>
+			    		<p>SFPC, School For Poetic Computation, New York, Fall 2014<br>Post Graduate Course / Artist Residency</p>
+			    		<p>ISIA Firenze / 2011 —— 2014<br>MA - Communication Design</p>
+			    		<p>ISIA Firenze / 2008 —— 2012<br>BA - Product and Communication Design</p>
+		    		</div>
+		    		<!-- <h2 id="works-title">works</h2>
+		    		<p id="works"></p> -->
+		    	</div>
+		    	<div class="project"></div>
+		    	<div class="contacts"></div>
+		    </div>
 	    </div>
 	</div>
     
