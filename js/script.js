@@ -375,8 +375,6 @@ function rotateZtoAndStop() {
     angPosZ = angOffsetZ;
   }
 
-  console.log(angPosZ);
-  console.log(angStepZ);
   
 }
 
