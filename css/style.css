@@ -111,6 +111,7 @@ div.li-container:hover{
   line-height: 14px;
 }
 
-.page h2 {
+h2.page h2 {
   font-size: 14px;
+  color: #000;
 }

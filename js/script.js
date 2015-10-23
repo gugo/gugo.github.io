@@ -263,18 +263,23 @@ var time_old=0;
 var offsetZ = 0;
 var offsetX = 0;
 var offsetY = 0;
+var angOffsetZ = 0;
 var oldOffsetZ = 0;
 var oldOffsetX = 0;
 var oldOffsetY = 0;
+var oldAngOffsetZ = 0;
 var distanceZ = 0;
 var distanceX = 0;
 var distanceY = 0;
+var angDistanceZ = 0;
 var stepZ = 0;
 var stepY = 0;
 var stepX = 0;
+var angStepZ = 0;
 var posX = 0;
 var posY = 0;
 var posZ = 0;
+var angPosZ = 0;
 var treshold = 0.05;
 
 var p = 0;
@@ -286,27 +291,33 @@ function checkButton(mode) {
     offsetZ = 0;
     offsetX = 0;
     offsetY = 0;
+    angOffsetZ = 0;
   } else if (mode == 1) {
     offsetZ = 12;
     offsetX = 0;
     offsetY = 0;
+    angOffsetZ = 90;
   } else if (mode == 2) {
     offsetZ = 0;
     offsetX = radius-0.3;
     offsetY = 0;
+    angOffsetZ = 0;
   } else if (mode == 3) {
     offsetZ = 4;
     offsetX = 3;
     offsetY = 5;
+    angOffsetZ = 0;
   }
 
   distanceZ = Math.abs(offsetZ - oldOffsetZ);
   distanceX = Math.abs(offsetX - oldOffsetX);
   distanceY = Math.abs(offsetY - oldOffsetY);
+  angDistanceZ = Math.abs(angOffsetZ - oldAngOffsetZ);
 
-  stepZ = distanceZ/120;
-  stepX = distanceX/120;
-  stepY = distanceY/120;
+  stepZ = distanceZ/90;
+  stepX = distanceX/90;
+  stepY = distanceY/90;
+  angStepZ = angDistanceZ/90;
 
   p = mode;  
   
@@ -349,6 +360,24 @@ function moveToAndStop() {
 
 }
 
+function rotateZtoAndStop() {
+  // LIBS.set_I4(MOVEMATRIX);
+  LIBS.rotateZ(MOVEMATRIX, LIBS.degToRad(angPosZ));
+  LIBS.rotateY(MOVEMATRIX, z);
+
+  oldAngOffsetZ = angPosZ;
+
+  if (angPosZ > angOffsetZ) {
+    angPosZ -= angStepZ;
+  } else if (angPosZ < angOffsetZ) {
+    angPosZ += angStepZ;
+  } else {
+    angPosZ = angOffsetZ;
+  }
+
+  
+}
+
 var animate=function(time) {
 
   time_old=time;
@@ -365,28 +394,28 @@ var animate=function(time) {
   if(p == 0) {
 
     moveToAndStop();
-    LIBS.rotateY(MOVEMATRIX, z);
-    LIBS.rotateZ(MOVEMATRIX, LIBS.degToRad(posZ*(7.5)));
+    rotateZtoAndStop();
     z -= 0.005;
 
   } else if (p == 1) {
 
     moveToAndStop();
-    LIBS.rotateY(MOVEMATRIX, z);
-    LIBS.rotateZ(MOVEMATRIX, LIBS.degToRad(posZ*7.5));
+    rotateZtoAndStop();
+    // LIBS.rotateY(MOVEMATRIX, z);
     z -= 0.01;
 
   } else if (p == 2) {
     
     moveToAndStop();
-    LIBS.rotateY(MOVEMATRIX, z);
-    LIBS.rotateZ(MOVEMATRIX, LIBS.degToRad(posZ*(7.5)));
+    rotateZtoAndStop();
+    // LIBS.rotateY(MOVEMATRIX, z);
     z -= 0.01;
 
   } else {
     
     moveToAndStop();
-    LIBS.rotateY(MOVEMATRIX, z);
+    rotateZtoAndStop();
+    // LIBS.rotateY(MOVEMATRIX, z);
     z -= 0.01;
   }
 
