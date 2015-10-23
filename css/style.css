@@ -1,0 +1,117 @@
+body {
+  background: #fff;
+  font-family: helvetica, arial;
+}
+
+a {
+  text-decoration: none;
+  color: #fefefe;
+}
+
+#container {
+  position: relative;
+}
+#container canvas, #overlay {
+  position: absolute;
+}
+
+#overlay {
+  /*top:5%;
+	left:2%;*/
+}
+/*.main-nav {
+  width: 50%;
+  height: 50%;
+}*/
+
+canvas {
+}
+
+/*HEADER*/
+.main-nav {
+  position: absolute;
+  top:5%;
+  left:2%;
+  /*width: 12%;
+  height: 12%;*/
+  margin-right: 1%;
+
+}
+
+.header {
+  color: #fff;
+  font-size: 48px;
+  line-height: 24px;
+}
+
+.nav-title-container:hover {
+  min-height: 35px;
+  background-color: #000000;
+  opacity: 0.5;
+}
+
+.nav-title {
+  text-align: left;
+  text-shadow: 1px 1px #222222;
+  font-size: 48px;
+  line-height: 12px;
+}
+
+.nav-subtitle {
+  padding-top: 8px;
+  color: #000;
+  text-align: left;
+  text-shadow: none;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.nav-title:hover {
+  opacity: 1;
+}
+
+.nav-main-list li{
+  list-style: none;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: left;
+  text-decoration: none;
+  text-shadow: 1px 1px #222222;
+}
+
+.nav-secondary-list {
+  position: relative;
+  left:-15px;
+}
+
+.nav-secondary-list li {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+div.li-container:hover{
+  min-height: 24px;
+  background-color: #000000;
+  opacity: 0.5;
+}
+
+/*PAGE*/
+
+.page-nav {
+  position: absolute;
+  max-width: 30%;
+  max-height: 30%;
+  top:7%;
+  left:35%;
+  /*display: block;*/
+  /*float: right;*/
+  color: #000;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 14px;
+}
+
+h2.page h2 {
+  font-size: 14px;
+  color: #000;
+}
