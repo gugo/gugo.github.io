@@ -8,12 +8,12 @@ a {
   color: #fefefe;
 }
 
-#container {
-  position: relative;
+/*#container {
+  position: fixed;
 }
 #container canvas, #overlay {
   position: absolute;
-}
+}*/
 
 #overlay {
   /*top:5%;
@@ -25,11 +25,13 @@ a {
 }*/
 
 canvas {
+
 }
 
 /*HEADER*/
+
 .main-nav {
-  position: absolute;
+  position: fixed;
   top:5%;
   left:2%;
   /*width: 12%;
@@ -99,8 +101,8 @@ div.li-container:hover{
 
 .page-nav {
   position: absolute;
-  max-width: 30%;
-  max-height: 30%;
+  max-width: 50%;
+  /*max-height: 60%;*/
   top:7%;
   left:35%;
   /*display: block;*/
@@ -115,6 +117,55 @@ h2.page h2 {
   font-size: 14px;
   color: #000;
 }
+
+/*ABOUT*/
+.about {
+  width: 60%;
+}
+
+/*PROJECT*/
+
+div.project {
+  width: 100%;
+  padding: 10px 10px;
+  background-color: rgba(0,0,0,0.2);
+  color: #000;
+}
+
+div.title {
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 10px;
+}
+
+div.data {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 10px;
+  text-align: right;
+}
+
+.data p {
+  margin-top: -5px;
+}
+
+div.media {
+  width: 100%;
+}
+
+p.description {
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 12px;
+}
+
+div.images {
+  
+}
+
+
+/*CONTACT*/
 
 #contact-form input[type="text"],
 #contact-form input[type="email"],
@@ -151,9 +202,9 @@ h2.page h2 {
   width:20%;
   border:none;
   background:#222;
-  background-image:linear-gradient(bottom, #111 0%, #222 52%);
-  background-image:-moz-linear-gradient(bottom, #111 0%, #222 52%);
-  background-image:-webkit-linear-gradient(bottom, #111 0%, #222 52%);
+  background-image:linear-gradient(bottom, #a4a4a4 0%, #b4b4b4 52%);
+  background-image:-moz-linear-gradient(bottom, #a4a4a4 0%, #b4b4b4 52%);
+  background-image:-webkit-linear-gradient(bottom, #a4a4a4 0%, #b4b4b4 52%);
   color:#FFF;
   margin:0 0 5px;
   padding:10px;
@@ -188,3 +239,27 @@ h2.page h2 {
 :-ms-input-placeholder {
     color:#888;
 }
+
+.social-icons-list {
+    position: relative;
+}
+
+.social-icons-list li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    border-radius: 2px;
+}
+
+.social-icons-list li, .social-icons-list a {
+    height: 30px;
+    display: block;
+}
+
+
+
+
+
+

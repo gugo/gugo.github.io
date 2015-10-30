@@ -1,0 +1,91 @@
+#showreel {
+  height: 375px;
+  background: url("/img/digital-embroidery-01.gif") 0,0;
+}
+
+#artifact {
+  height: 500px;
+  background: url("/img/digital-embroidery-02.gif") 0,0;
+}
+
+#smf-main-logo {
+  height: 450px;
+  background: url("/img/smflogo-01.png") 0,0;
+}
+
+#variants {
+	height: 450px;
+  	background: url("/img/smflogo-02.jpg") 0,0;
+}
+
+#vimeo {
+    left: 0px;
+    width: 30px;
+    background: url("/img/social-media-icons-grey-small.gif") 0 0;
+}
+
+#github {
+    left: 35px;
+    width: 30px;
+    background: url("/img/social-media-icons-grey-small.gif") -30px 0;
+}
+
+#twitter {
+    left: 70px;
+    width: 30px;
+    background: url("/img/social-media-icons-grey-small.gif") -60px 0;
+}
+
+#behance {
+    left: 105px;
+    width: 30px;
+    background: url("/img/social-media-icons-grey-small.gif") -90px 0;
+}
+
+#tumblr {
+    left: 140px;
+    width: 30px;
+    background: url("/img/social-media-icons-grey-small.gif") -120px 0;
+}
+
+#pinterest {
+    left: 175px;
+    width: 30px;
+    background: url("/img/social-media-icons-grey-small.gif") -150px 0;
+}
+
+#vimeo:hover {
+    left: 0px;
+    width: 30px;
+    background: url("/img/social-media-icons-color-small.gif") 0 0;
+}
+
+#github:hover {
+    left: 35px;
+    width: 30px;
+    background: url("/img/social-media-icons-color-small.gif") -30px 0;
+}
+
+#twitter:hover {
+    left: 70px;
+    width: 30px;
+    background: url("/img/social-media-icons-color-small.gif") -60px 0;
+}
+
+#behance:hover {
+    left: 105px;
+    width: 30px;
+    background: url("/img/social-media-icons-color-small.gif") -90px 0;
+}
+
+#tumblr:hover {
+    left: 140px;
+    width: 30px;
+    background: url("/img/social-media-icons-color-small.gif") -120px 0;
+}
+
+#pinterest:hover {
+    left: 175px;
+    width: 30px;
+    background: url("/img/social-media-icons-color-small.gif") -150px 0;
+}
