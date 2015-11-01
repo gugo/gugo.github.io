@@ -9,6 +9,11 @@ var effects = function() {
 
     $('.nav-title').click(function() {
         $('.nav-main-list').toggle();
+        $('.about').hide();
+        $('.contact').hide();
+        $('.project').hide();
+        $('#digitalembroidery').hide();
+        $('#smflogo').hide();
     });
 
     $('#about').click(function() {

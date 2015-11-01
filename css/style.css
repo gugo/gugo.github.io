@@ -101,7 +101,7 @@ div.li-container:hover{
 
 .page-nav {
   position: absolute;
-  max-width: 50%;
+  width: 50%;
   /*max-height: 60%;*/
   top:7%;
   left:35%;
@@ -124,6 +124,12 @@ h2.page h2 {
 }
 
 /*PROJECT*/
+
+iframe.project-container {
+  border:none;
+  width: 100%;
+  height: 2000px;
+}
 
 div.project {
   width: 100%;
