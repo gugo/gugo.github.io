@@ -86,10 +86,17 @@ canvas {
   left:-15px;
 }
 
-.nav-secondary-list li {
+.nav-secondary-list li{
   font-size: 12px;
   line-height: 18px;
 }
+
+.nav-secondary-list a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 
 div.li-container:hover{
   min-height: 24px;
@@ -121,6 +128,7 @@ h2.page h2 {
 /*ABOUT*/
 .about {
   width: 60%;
+  line-height: 16px;
 }
 
 /*PROJECT*/
@@ -128,8 +136,12 @@ h2.page h2 {
 iframe.project-container {
   border:none;
   width: 100%;
-  height: 2000px;
+  height: 100%;
 }
+
+/*#psytroflo iframe {
+  height: 5000px;
+}*/
 
 div.project {
   width: 100%;
@@ -138,7 +150,13 @@ div.project {
   color: #000;
 }
 
-div.title {
+.description, .project-footer  {
+  padding: 10px 10px;
+  background-color: rgba(0,0,0,0.2);
+
+}
+
+div.title h1{
   font-size: 25px;
   font-weight: bold;
   line-height: 10px;
@@ -151,23 +169,24 @@ div.data {
   text-align: right;
 }
 
-.data p {
+div.data {
   margin-top: -5px;
 }
 
 div.media {
   width: 100%;
+  background-color: rgba(0,0,0,0.2);
 }
 
 p.description {
-  padding-left: 10px;
   font-size: 12px;
   font-weight: normal;
   line-height: 12px;
 }
 
-div.images {
-  
+.project-image {
+
+  width: 100%;
 }
 
 
