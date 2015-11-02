@@ -2,21 +2,24 @@
 <html>
 
   <head>
+  	<title>GUGO | Artist Work Portfolio</title>
+
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset='utf-8'/>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="robots" content="index,follow"/>
+    <meta name="author" content="gugo">
+    <meta name="description" content="Gugo homepage">
+	<meta name="keywords" content="gugo, digital, artist, interaction, designer, firenze, italy">
+    
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0">
-	<meta name="author" content="gugo">
-	<meta name="description" content="Gugo homepage!!x">
-	<meta name="keywords" content="website, gugo, webgl, chrome, shaders, creative, css, html, javascript, front-end">
-
-	<title>GUGO</title>
 	
     <script type="text/javascript" src="js/libs.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
-    <!-- <script type="text/javascript" src="js/antispam.js"></script> -->
+    <script type="text/javascript" src="js/height.js"></script>
 
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <link type="text/css" rel="stylesheet" href="css/images.css"/>	
@@ -63,10 +66,10 @@
 			   							<li><a href="#">Gugo Logo</a></li>
 			   						</div>
 			   						<div class="li-container">
-			   							<li><a href="#"></a>Psy-Tro-Flo</li>
+			   							<li><a href="psychotropicalflorence.html" target="iframe-psytroflo" class="psytroflo">Psy-Tro-Flo</a></li>
 			   						</div>
 			   						<div class="li-container">
-			   							<li><a href="#"></a>Baloops</li>
+			   							<li><a href="#">Baloops</a></li>
 			   						</div>
 			   					</ul>
 			   				</li>
@@ -83,13 +86,14 @@
 		    <div class="page">
 		    	<div class="about">
 		    		<div id="data">
-		    			<p>Guglielmo Torelli<br>Based in Airports</p>
+		    			<h3>Guglielmo Torelli</h3>
+		    			<p>Based in Florence</p>
 		    		</div>
 		    		<div id="intro">
 		    			<p>Visual artist and Interaction designer, loves to design everything that is open, experimental and interactive.<br>Addicted to web technologies, physical computing and poetic computation.<br>Works as a freelance designer since 2012.</p>
 		    		</div>
 		    		<div id="education">
-		    			<h3 id="education-title">education</h3>
+		    			<h3 id="education-title">Education</h3>
 			    		<p>SFPC, School For Poetic Computation, New York, Fall 2014<br>Post Graduate Course / Artist Residency</p>
 			    		<p>XYlab, Y-Videomhacking, Castrignano de’ Greci, 2014<br>New Technologies and Self-Productions Workshop</p>
 			    		<p>ISIA Firenze / 2011 —— 2014<br>MA - Communication Design</p>
@@ -102,18 +106,20 @@
 		    		<div id="mirroredbabel"></div>
 		    		<div id="napnap"></div>
 		    		<div id="digitalembroidery">
-		    			<iframe width="500px" height="" scrolling="no" name="iframe-digitalembroidery" class="project-container"></iframe>
+		    			<iframe width="500px" height="" scrolling="no" name="iframe-digitalembroidery" class="project-container" id="h-digitalembroidery" onload="setIframeHeight(this.id)"></iframe>
 		    		</div>
 		    		<div id="smflogo">
-		    			<iframe width="500px" height="" scrolling="no" name="iframe-smflogo" class="project-container"></iframe>
+		    			<iframe width="500px" height="" scrolling="no" name="iframe-smflogo" class="project-container" id="h-smflogo" onload="setIframeHeight(this.id)"></iframe>
 		    		</div>
 		    		<div id="gugologo"></div>
-		    		<div id="psytroflo"></div>
+		    		<div id="psytroflo">
+		    			<iframe width="500px" height="" scrolling="no" name="iframe-psytroflo" class="project-container" id="h-psytroflo" onload="setIframeHeight(this.id)"></iframe>
+		    		</div>
 		    		<div id="baloops"></div>
 		    	</div>
 		    	<div class="contact">
 		    		<div class="submit-module">
-		    		<p>Contact</p>
+		    		<h3>Contact</h3>
 			    		<form id="contact-form" action="//formspree.io/gugo.torelli@gmail.com" method="POST">
 						    <input type="text" name="name" placeholder="Your name (required)">
 						    <input type="email" name="_replyto" placeholder="Your email (required)">
@@ -124,7 +130,7 @@
 						</form>
 					</div>
 					<div class="social-icons">
-					<p>Social</p>
+					<h3>Social</h3>
 						<ul class="social-icons-list">
 							<li id="vimeo">
 								<a href="https://vimeo.com/iamgugo" target="_blank"></a>

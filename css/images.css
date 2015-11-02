@@ -1,23 +1,3 @@
-#showreel {
-  height: 375px;
-  background: url("/img/digital-embroidery-01.gif") no-repeat 0,0;
-}
-
-#artifact {
-  height: 500px;
-  background: url("/img/digital-embroidery-02.gif") no-repeat 0,0;
-}
-
-#smf-main-logo {
-  height: 450px;
-  background: url("/img/smflogo-01.png") no-repeat 0,0;
-}
-
-#variants {
-	height: 450px;
-  	background: url("/img/smflogo-02.jpg") no-repeat 0,0;
-}
-
 #vimeo {
     left: 0px;
     width: 30px;

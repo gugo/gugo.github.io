@@ -294,7 +294,7 @@ function checkButton(mode) {
     angOffsetZ = 0;
   } else if (mode == 1) {
     offsetZ = 12;
-    offsetX = 0;
+    offsetX = 3;
     offsetY = 0;
     angOffsetZ = 90;
   } else if (mode == 2) {

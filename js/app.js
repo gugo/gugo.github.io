@@ -6,14 +6,17 @@ var effects = function() {
     $('.project').hide();
     $('#digitalembroidery').hide();
     $('#smflogo').hide();
+    $('#psytroflo').hide();
 
     $('.nav-title').click(function() {
         $('.nav-main-list').toggle();
+        $('.nav-secondary-list').hide();
         $('.about').hide();
         $('.contact').hide();
         $('.project').hide();
         $('#digitalembroidery').hide();
         $('#smflogo').hide();
+        $('#psytroflo').hide();
     });
 
     $('#about').click(function() {
@@ -40,13 +43,20 @@ var effects = function() {
     $('.digitalembroidery').click(function() {
         $('#digitalembroidery').show();
         $('#smflogo').hide();
+        $('#psytroflo').hide();
     });
 
     $('.smflogo').click(function() {
         $('#smflogo').show();
         $('#digitalembroidery').hide();
+        $('#psytroflo').hide();
     });
 
+    $('.psytroflo').click(function() {
+        $('#psytroflo').show();
+        $('#smflogo').hide();
+        $('#digitalembroidery').hide();
+    });
 }
 
 $(document).ready(effects);
