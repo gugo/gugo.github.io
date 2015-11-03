@@ -50,11 +50,11 @@
 			   				<li>
 			   					<a href="#" id="projects" onclick="checkButton(2)">projects</a>
 			   					<ul class="nav-secondary-list">
-			   						<div class="li-container">
+			   						<!-- <div class="li-container">
 			   							<li><a href="#">Mirrored Babel</a></li>
-			   						</div>
+			   						</div> -->
 			   						<div class="li-container">
-			   							<li><a href="">NapNap</a></li>
+			   							<li><a href="napnap.html" target="iframe-napnap" class="napnap">NapNap</a></li>
 			   						</div>
 			   						<div class="li-container">
 			   							<li><a href="digitalembroidery.html" target="iframe-digitalembroidery" class="digitalembroidery">Digital Embroidery</a></li>
@@ -63,13 +63,13 @@
 			   							<li><a href="smfgenerativelogo.html" target="iframe-smflogo" class="smflogo">SMF Logo</a></li>
 			   						</div>
 			   						<div class="li-container">
-			   							<li><a href="#">Gugo Logo</a></li>
+			   							<li><a href="gugologo.html" target="iframe-gugologo" class="gugologo">Gugo Logo</a></li>
 			   						</div>
 			   						<div class="li-container">
 			   							<li><a href="psychotropicalflorence.html" target="iframe-psytroflo" class="psytroflo">Psy-Tro-Flo</a></li>
 			   						</div>
 			   						<div class="li-container">
-			   							<li><a href="#">Baloops</a></li>
+			   							<li><a href="balloops.html" target="iframe-balloops" class="balloops">Balloops</a></li>
 			   						</div>
 			   					</ul>
 			   				</li>
@@ -82,7 +82,7 @@
 		   		</ul>
 		    </div>
 		</div>
-		<div id="overlay" class="page-nav">
+		<div id="overlay" class="page-nav-small">
 		    <div class="page">
 		    	<div class="about">
 		    		<div id="data">
@@ -102,21 +102,35 @@
 		    		<!-- <h2 id="works-title">works</h2>
 		    		<p id="works"></p> -->
 		    	</div>
+			</div>
+		</div>
+		<div id="overlay" class="page-nav">
+		    <div class="page">
 		    	<div class="project">
-		    		<div id="mirroredbabel"></div>
-		    		<div id="napnap"></div>
+		    		<!-- <div id="mirroredbabel"></div> -->
+		    		<div id="napnap">
+		    			<iframe width="500px" height="" scrolling="no" name="iframe-napnap" class="project-container" id="h-napnap" onload="setIframeHeight(this.id)"></iframe>
+		    		</div>
 		    		<div id="digitalembroidery">
 		    			<iframe width="500px" height="" scrolling="no" name="iframe-digitalembroidery" class="project-container" id="h-digitalembroidery" onload="setIframeHeight(this.id)"></iframe>
 		    		</div>
 		    		<div id="smflogo">
 		    			<iframe width="500px" height="" scrolling="no" name="iframe-smflogo" class="project-container" id="h-smflogo" onload="setIframeHeight(this.id)"></iframe>
 		    		</div>
-		    		<div id="gugologo"></div>
+		    		<div id="gugologo">
+		    			<iframe width="500px" height="" scrolling="no" name="iframe-gugologo" class="project-container" id="h-gugologo" onload="setIframeHeight(this.id)"></iframe>
+		    		</div>
 		    		<div id="psytroflo">
 		    			<iframe width="500px" height="" scrolling="no" name="iframe-psytroflo" class="project-container" id="h-psytroflo" onload="setIframeHeight(this.id)"></iframe>
 		    		</div>
-		    		<div id="baloops"></div>
+		    		<div id="baloops">
+		    			<iframe width="500px" height="" scrolling="no" name="iframe-balloops" class="project-container" id="h-balloops" onload="setIframeHeight(this.id)"></iframe>
+		    		</div>
 		    	</div>
+			</div>
+		</div>
+		<div id="overlay" class="page-nav-small">
+		    <div class="page">
 		    	<div class="contact">
 		    		<div class="submit-module">
 		    		<h3>Contact</h3>

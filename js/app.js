@@ -7,6 +7,9 @@ var effects = function() {
     $('#digitalembroidery').hide();
     $('#smflogo').hide();
     $('#psytroflo').hide();
+    $('#gugologo').hide();
+    $('#balloops').hide();
+    $('#napnap').hide();
 
     $('.nav-title').click(function() {
         $('.nav-main-list').toggle();
@@ -17,6 +20,9 @@ var effects = function() {
         $('#digitalembroidery').hide();
         $('#smflogo').hide();
         $('#psytroflo').hide();
+        $('#gugologo').hide();
+        $('#balloops').hide();
+        $('#napnap').hide();
     });
 
     $('#about').click(function() {
@@ -44,18 +50,54 @@ var effects = function() {
         $('#digitalembroidery').show();
         $('#smflogo').hide();
         $('#psytroflo').hide();
+        $('#gugologo').hide();
+        $('#balloops').hide();
+        $('#napnap').hide();
     });
 
     $('.smflogo').click(function() {
         $('#smflogo').show();
         $('#digitalembroidery').hide();
         $('#psytroflo').hide();
+        $('#gugologo').hide();
+        $('#balloops').hide();
+        $('#napnap').hide();
     });
 
     $('.psytroflo').click(function() {
         $('#psytroflo').show();
         $('#smflogo').hide();
         $('#digitalembroidery').hide();
+        $('#gugologo').hide();
+        $('#balloops').hide();
+        $('#napnap').hide();
+    });
+
+    $('.gugologo').click(function() {
+        $('#gugologo').show();
+        $('#smflogo').hide();
+        $('#digitalembroidery').hide();
+        $('#psytroflo').hide();
+        $('#balloops').hide();
+        $('#napnap').hide();
+    });
+
+    $('.balloops').click(function() {
+        $('#balloops').show();
+        $('#smflogo').hide();
+        $('#digitalembroidery').hide();
+        $('#psytroflo').hide();
+        $('#gugologo').hide();
+        $('#napnap').hide();
+    });
+
+    $('.napnap').click(function() {
+        $('#napnap').show();
+        $('#smflogo').hide();
+        $('#digitalembroidery').hide();
+        $('#psytroflo').hide();
+        $('#gugologo').hide();
+        $('#balloops').hide();
     });
 }
 
