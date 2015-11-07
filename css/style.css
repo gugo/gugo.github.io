@@ -147,10 +147,16 @@ h2.page h2 {
 
 /*PROJECT*/
 
+div.project-container {
+
+
+}
+
 iframe.project-container {
   border:none;
   width: 100%;
   height: 100%;
+  
 }
 
 .videoWrapper {
@@ -168,15 +174,39 @@ iframe.project-container {
   height: 100%;
 }
 
-/*#psytroflo iframe {
-  height: 5000px;
-}*/
+#napnap iframe.project-container {
+  height: 4800px;
+}
+
+#digitalembroidery iframe.project-container {
+  height: 2300px;
+}
+
+#smflogo iframe.project-container {
+  height: 2000px;
+}
+
+#gugologo iframe.project-container {
+  height: 800px;
+}
+
+#psytroflo iframe.project-container {
+  height: 5200px;
+}
+
+#balloops iframe.project-container {
+  height: 7920px;
+}
+
+div.page {
+}
 
 div.project {
   width: 100%;
   padding: 10px 10px;
   background-color: rgba(0,0,0,0.2);
   color: #000;
+  overflow: auto;
 }
 
 .description, .project-footer  {
