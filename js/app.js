@@ -46,58 +46,58 @@ var effects = function() {
         $('.nav-secondary-list').hide();
     });
 
+    $('.napnap').click(function() {
+        $('#napnap').show();
+        $('#digitalembroidery').hide();
+        $('#smflogo').hide();
+        $('#gugologo').hide();
+        $('#psytroflo').hide();
+        $('#balloops').hide();
+    });
+
     $('.digitalembroidery').click(function() {
+        $('#napnap').hide();
         $('#digitalembroidery').show();
         $('#smflogo').hide();
-        $('#psytroflo').hide();
         $('#gugologo').hide();
+        $('#psytroflo').hide();
         $('#balloops').hide();
-        $('#napnap').hide();
     });
 
     $('.smflogo').click(function() {
+        $('#napnap').hide();
+        $('#digitalembroidery').hide();
         $('#smflogo').show();
-        $('#digitalembroidery').hide();
+        $('#gugologo').hide();
         $('#psytroflo').hide();
-        $('#gugologo').hide();
         $('#balloops').hide();
-        $('#napnap').hide();
-    });
-
-    $('.psytroflo').click(function() {
-        $('#psytroflo').show();
-        $('#smflogo').hide();
-        $('#digitalembroidery').hide();
-        $('#gugologo').hide();
-        $('#balloops').hide();
-        $('#napnap').hide();
     });
 
     $('.gugologo').click(function() {
-        $('#gugologo').show();
-        $('#smflogo').hide();
+        $('#napnap').hide();
         $('#digitalembroidery').hide();
+        $('#smflogo').hide();
+        $('#gugologo').show();
         $('#psytroflo').hide();
         $('#balloops').hide();
-        $('#napnap').hide();
     });
+
+    $('.psytroflo').click(function() {
+        $('#napnap').hide();
+        $('#digitalembroidery').hide();
+        $('#smflogo').hide();
+        $('#gugologo').hide();
+        $('#psytroflo').show();
+        $('#balloops').hide();
+    })
 
     $('.balloops').click(function() {
-        $('#balloops').show();
-        $('#smflogo').hide();
-        $('#digitalembroidery').hide();
-        $('#psytroflo').hide();
-        $('#gugologo').hide();
         $('#napnap').hide();
-    });
-
-    $('.napnap').click(function() {
-        $('#napnap').show();
-        $('#smflogo').hide();
         $('#digitalembroidery').hide();
-        $('#psytroflo').hide();
+        $('#smflogo').hide();
         $('#gugologo').hide();
-        $('#balloops').hide();
+        $('#psytroflo').hide();
+        $('#balloops').show();
     });
 }
 
