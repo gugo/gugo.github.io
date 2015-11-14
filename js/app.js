@@ -10,6 +10,7 @@ var effects = function() {
     $('#gugologo').hide();
     $('#balloops').hide();
     $('#napnap').hide();
+    $('#babeltower').hide();
 
     $('.nav-title').click(function() {
         $('.nav-main-list').toggle();
@@ -23,6 +24,7 @@ var effects = function() {
         $('#gugologo').hide();
         $('#balloops').hide();
         $('#napnap').hide();
+        $('#babeltower').hide();
     });
 
     $('#about').click(function() {
@@ -46,7 +48,18 @@ var effects = function() {
         $('.nav-secondary-list').hide();
     });
 
+    $('.babeltower').click(function() {
+        $('#babeltower').show();
+        $('#napnap').hide();
+        $('#digitalembroidery').hide();
+        $('#smflogo').hide();
+        $('#gugologo').hide();
+        $('#psytroflo').hide();
+        $('#balloops').hide();
+    });
+
     $('.napnap').click(function() {
+        $('#babeltower').hide();
         $('#napnap').show();
         $('#digitalembroidery').hide();
         $('#smflogo').hide();
@@ -56,6 +69,7 @@ var effects = function() {
     });
 
     $('.digitalembroidery').click(function() {
+        $('#babeltower').hide();
         $('#napnap').hide();
         $('#digitalembroidery').show();
         $('#smflogo').hide();
@@ -65,6 +79,7 @@ var effects = function() {
     });
 
     $('.smflogo').click(function() {
+        $('#babeltower').hide();
         $('#napnap').hide();
         $('#digitalembroidery').hide();
         $('#smflogo').show();
@@ -74,6 +89,7 @@ var effects = function() {
     });
 
     $('.gugologo').click(function() {
+        $('#babeltower').hide();
         $('#napnap').hide();
         $('#digitalembroidery').hide();
         $('#smflogo').hide();
@@ -83,6 +99,7 @@ var effects = function() {
     });
 
     $('.psytroflo').click(function() {
+        $('#babeltower').hide();
         $('#napnap').hide();
         $('#digitalembroidery').hide();
         $('#smflogo').hide();
@@ -92,6 +109,7 @@ var effects = function() {
     })
 
     $('.balloops').click(function() {
+        $('#babeltower').hide();
         $('#napnap').hide();
         $('#digitalembroidery').hide();
         $('#smflogo').hide();
