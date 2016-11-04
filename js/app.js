@@ -11,6 +11,8 @@ var effects = function() {
     $('#balloops').hide();
     $('#napnap').hide();
     $('#babeltower').hide();
+    $('#moodwall').hide();
+    $('#utopia').hide();
 
     $('.nav-title').click(function() {
         $('.nav-main-list').toggle();
@@ -25,6 +27,8 @@ var effects = function() {
         $('#balloops').hide();
         $('#napnap').hide();
         $('#babeltower').hide();
+        $('#moodwall').hide();
+        $('#utopia').hide();
     });
 
     $('#about').click(function() {
@@ -48,6 +52,30 @@ var effects = function() {
         $('.nav-secondary-list').hide();
     });
 
+    $('.moodwall').click(function() {
+        $('#moodwall').show();
+        $('#babeltower').hide();
+        $('#napnap').hide();
+        $('#digitalembroidery').hide();
+        $('#smflogo').hide();
+        $('#gugologo').hide();
+        $('#psytroflo').hide();
+        $('#balloops').hide();
+        $('#utopia').hide();
+    });
+
+    $('.utopia').click(function() {
+        $('#moodwall').hide();
+        $('#babeltower').hide();
+        $('#napnap').hide();
+        $('#digitalembroidery').hide();
+        $('#smflogo').hide();
+        $('#gugologo').hide();
+        $('#psytroflo').hide();
+        $('#balloops').hide();
+        $('#utopia').show();
+    });
+
     $('.babeltower').click(function() {
         $('#babeltower').show();
         $('#napnap').hide();
@@ -56,6 +84,8 @@ var effects = function() {
         $('#gugologo').hide();
         $('#psytroflo').hide();
         $('#balloops').hide();
+        $('#moodwall').hide();
+        $('#utopia').hide();
     });
 
     $('.napnap').click(function() {
@@ -66,6 +96,8 @@ var effects = function() {
         $('#gugologo').hide();
         $('#psytroflo').hide();
         $('#balloops').hide();
+        $('#moodwall').hide();
+        $('#utopia').hide();
     });
 
     $('.digitalembroidery').click(function() {
@@ -76,6 +108,8 @@ var effects = function() {
         $('#gugologo').hide();
         $('#psytroflo').hide();
         $('#balloops').hide();
+        $('#moodwall').hide();
+        $('#utopia').hide();
     });
 
     $('.smflogo').click(function() {
@@ -86,6 +120,8 @@ var effects = function() {
         $('#gugologo').hide();
         $('#psytroflo').hide();
         $('#balloops').hide();
+        $('#moodwall').hide();
+        $('#utopia').hide();
     });
 
     $('.gugologo').click(function() {
@@ -96,6 +132,7 @@ var effects = function() {
         $('#gugologo').show();
         $('#psytroflo').hide();
         $('#balloops').hide();
+        $('#moodwall').hide();
     });
 
     $('.psytroflo').click(function() {
@@ -106,6 +143,8 @@ var effects = function() {
         $('#gugologo').hide();
         $('#psytroflo').show();
         $('#balloops').hide();
+        $('#moodwall').hide();
+        $('#utopia').hide();
     })
 
     $('.balloops').click(function() {
@@ -116,6 +155,8 @@ var effects = function() {
         $('#gugologo').hide();
         $('#psytroflo').hide();
         $('#balloops').show();
+        $('#moodwall').hide();
+        $('#utopia').hide();
     });
 }
 
