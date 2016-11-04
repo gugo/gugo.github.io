@@ -293,7 +293,7 @@ function checkButton(mode) {
     offsetY = 0;
     angOffsetZ = 0;
   } else if (mode == 1) {
-    offsetZ = 10;
+    offsetZ = 11;
     offsetX = 3;
     offsetY = 0;
     angOffsetZ = 90;
