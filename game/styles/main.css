@@ -1,0 +1,602 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+a,
+abbr,
+acronym,
+address,
+code,
+del,
+dfn,
+em,
+img,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+caption,
+tbody,
+tfoot,
+thead,
+tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+font-weight: inherit;
+font-style: inherit;
+font-family: inherit;
+font-size: 100%;
+vertical-align: baseline;
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+line-height: 1;
+color: #000;
+background: #fff;
+border-collapse: separate;
+border-spacing: 0;
+vertical-align: middle;
+text-align: left;
+font-weight: normal;
+vertical-align: middle;
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+main {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]),
+[hidden] {
+  display: none;
+}
+@font-face {
+  font-family: 'MuseoSans';
+  font-weight: bold;
+  font-style: normal;
+  src: url("/fonts/2987C3_0_0.eot");
+  src: url("/fonts/2987C3_0_0.eot?#iefix") format('embedded-opentype'), url("/fonts/2987C3_0_0.woff") format('woff'), url("/fonts/2987C3_0_0.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'MuseoSans';
+  font-weight: normal;
+  font-style: normal;
+  src: url("/fonts/2987C3_1_0.eot");
+  src: url("/fonts/2987C3_1_0.eot?#iefix") format('embedded-opentype'), url("/fonts/2987C3_1_0.woff") format('woff'), url("/fonts/2987C3_1_0.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'MuseoSans-100';
+  src: url("/fonts/2987C3_2_0.eot");
+  src: url("/fonts/2987C3_2_0.eot?#iefix") format('embedded-opentype'), url("/fonts/2987C3_2_0.woff") format('woff'), url("/fonts/2987C3_2_0.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'MuseoSans';
+  font-weight: bold;
+  font-style: italic;
+  src: url("/fonts/2987C3_3_0.eot");
+  src: url("/fonts/2987C3_3_0.eot?#iefix") format('embedded-opentype'), url("/fonts/2987C3_3_0.woff") format('woff'), url("/fonts/2987C3_3_0.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'MuseoSans';
+  font-weight: normal;
+  font-style: italic;
+  src: url("/fonts/2987C3_4_0.eot");
+  src: url("/fonts/2987C3_4_0.eot?#iefix") format('embedded-opentype'), url("/fonts/2987C3_4_0.woff") format('woff'), url("/fonts/2987C3_4_0.ttf") format('truetype');
+}
+html,
+body {
+  font-size: 12px;
+  font-family: 'MuseoSans', Arial, Helvetica, sans-serif;
+  line-height: 1.5em;
+  letter-spacing: 0.14em;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0 0 0 0;
+}
+h1 {
+  font-size: 4em;
+  line-height: 1.2em;
+  font-family: 'MuseoSans-100', Arial, Helvetica, sans-serif;
+}
+h2 {
+  font-size: 3em;
+  line-height: 1.2em;
+}
+h3 {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+a {
+  color: #1df;
+}
+.spring {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  overflow: hidden;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+*::selection {
+  background: #3d0;
+}
+body {
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+body .game {
+  width: 800px;
+  height: 600px;
+  background-color: rgba(0,0,0,0.9);
+  color: #fff;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+body .game > header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -o-box-lines: single;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 120px;
+  overflow: hidden;
+}
+body .game > header >* {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  line-height: 1.2em;
+}
+body .game > header >.round {
+  font-size: 32px;
+  width: 300px;
+}
+body .game > header >.title {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+body .game > header >.title >h1 {
+  font-size: 24px;
+}
+body .game > header >.title >h2 {
+  padding-top: 10px;
+  font-size: 16px;
+}
+body .game > main {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+}
+body .game > main >.images {
+  background-color: rgba(255,255,255,0.3);
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: grid;
+  padding: 10px;
+  grid-gap: 10px;
+  grid-template-columns: auto auto;
+}
+body .game > main >.images >div {
+  background-color: rgba(0,0,0,0.1);
+  background-image: url("/imgs/cazzo-mene/2.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+body .game > main >aside {
+  width: 300px;
+  padding: 10px;
+  padding-bottom: 0px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -o-box-lines: single;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -o-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-line-pack: center;
+  -webkit-align-content: center;
+  align-content: center;
+  background-color: rgba(255,255,255,0.2);
+}
+body .game > main >aside >* {
+  margin-bottom: 10px;
+}
+body .game > main >aside >.user {
+  height: 60px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  overflow: hidden;
+  background-color: #f31;
+  color: #fff;
+}
+body .game > main >aside >.user >.icon {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0,0,0,0.1);
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+body .game > main >aside >.user >.label {
+  padding: 0px 10px;
+  height: 60px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -o-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  font-size: 18px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body .game > main >aside >.user >.label >span {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+}
+body .game > main >aside >.msg {
+  background-color: rgba(255,255,255,0.1);
+  text-align: center;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 10px;
+}
+body .game > main >aside >.word .grid {
+  text-align: center;
+}
+body .game > main >aside >.word .grid >span {
+  font-size: 20px;
+  text-transform: uppercase;
+  min-width: 30px;
+  background-color: #fff;
+  color: #333;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 2px;
+  text-align: center;
+  padding: 5px;
+}
+body .game > main >aside >.letters {
+  display: grid;
+  padding: 0px;
+  grid-gap: 4px;
+  grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));
+}
+body .game > main >aside >.letters >span {
+  background-color: #fd0;
+  color: #333;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+body .game > main >aside >.letters >span:before {
+  display: block;
+  content: "";
+  width: 0%;
+  padding-top: 100%;
+}
+body .game > main >aside >.letters >span.check {
+  background-color: #f31;
+}
